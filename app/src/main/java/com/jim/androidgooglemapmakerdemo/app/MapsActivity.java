@@ -150,7 +150,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.C
             tv_LatitudeText.setText(String.valueOf(mCurrentLocation.getLatitude()));
             tv_LongitudeText.setText(String.valueOf(mCurrentLocation.getLongitude()));
             LatLng latLng = new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
             getNearPlace();
         }
     }
